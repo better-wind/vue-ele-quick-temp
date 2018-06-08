@@ -1,0 +1,19 @@
+{
+  "code":"1",
+  "data":{
+    "rows":[
+      {
+        "id": 1,
+        "imageUrl":"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3159575759,329221210&fm=58",
+        "name": "iphoneX",
+        "detail":{
+          "brand":"Apple",
+          "price":"1"
+        }
+      }
+    ],
+    "total":1
+  },
+  "message":"error"
+}
+

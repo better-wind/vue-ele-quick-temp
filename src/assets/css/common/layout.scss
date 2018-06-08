@@ -1,0 +1,142 @@
+@import "reset";
+@import "config";
+
+$top-space:80px;
+.header-container{
+  position: fixed;
+  width: 100%;
+  @include hlh(80px,center);
+  background-color:rgb(255,255,255);
+  border-bottom: 2px solid $primary-color;
+  font-size: 20px;
+  color:$primary-color;
+  z-index: 90000;
+}
+.layout-container{
+  overflow-y: hidden;
+  position: relative;
+  .over-height{
+    min-height: 880px;
+    margin-bottom:-10000px;
+    padding-bottom:10000px;
+  }
+  .menu-box{
+    width: 210px;
+    .el-menu-vertical{
+      position: fixed;
+      top:$top-space;
+      z-index: 9;
+      min-width: 210px;
+      @extend .over-height;
+    }
+  }
+  .el-col-4{
+    min-width: 210px;
+  }
+  .el-col-20{
+    width: 80%;
+  }
+  .content-box{
+    position: relative;
+    margin-top: $top-space;
+    @extend .over-height;
+    >div{
+      padding-right: $base-space*2;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  #layout-container{
+    width: 1400px;
+    overflow: hidden;
+  }
+}
+.mg{
+  margin: $base-space;
+}
+.mg-t{
+  margin-top: $base-space;
+}
+.mg-l{
+  margin-left: $base-space;
+}
+.mg-l-h{
+  margin-left: $base-space/2;
+}
+.mg-r{
+  margin-right: $base-space;
+}
+.mg-b{
+  margin-bottom: 20px;
+}
+.mg-b-h{
+  margin-bottom: 10px;
+}
+.t-c{
+  text-align: center;
+}
+.t-l{
+  text-align: left;
+}
+.c-dis{
+  color: #9e9e9e;
+}
+.c-red{
+  color: #fb4b4d;
+}
+.c-green{
+  color: #13ce66;
+}
+.c-tip{
+  font-size: 12px;
+}
+.inline-r{
+  text-align: right;
+  padding-right: $base-space;
+}
+.fl-r{
+  float: right;
+}
+.title-box{
+  @include hlh(60px,left);
+  font-size: 20px;
+  border-bottom:1px solid $primary-color
+}
+.sub-title-box{
+  @include hlh(30px,left);
+  font-size: 20px;
+  padding-left: 20px;
+  border-left:1px solid $primary-color
+}
+.section-box{
+  .item-box{
+    padding: $base-space 0;
+  }
+  .inline-box{
+    display: inline-block;
+    margin-bottom: $base-space/2;
+  }
+  .block-box{
+    display: block;
+    padding: $base-space 0;
+  }
+  .input-item-middle{
+    width: 100px;
+  }
+  .input-item-large{
+    width: 200px;
+  }
+  .table-image > img{
+    width: 80px;
+    height: 80px
+  }
+}
+.label-sign{
+  padding-right:20px;
+  &:after{
+    content: '：';
+  }
+}
+.el-message{
+  z-index: 99999!important;
+}
